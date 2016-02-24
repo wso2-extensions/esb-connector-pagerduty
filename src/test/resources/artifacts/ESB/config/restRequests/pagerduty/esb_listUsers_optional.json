@@ -1,0 +1,8 @@
+{
+  "apiUrl": "%s(apiUrl)",
+  "apiToken": "%s(apiToken)",
+  "include": [
+    "contact_methods",
+    "notification_rules"
+  ]
+}
