@@ -134,6 +134,12 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    <scm>
+        <connection>scm:git:https://github.com/wso2-extensions/esb-connector-pagerduty.git</connection>
+        <url>https://github.com/wso2-extensions/esb-connector-pagerduty.git</url>
+        <developerConnection>scm:git:https://github.com/wso2-extensions/esb-connector-pagerduty</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
     <build>
         <plugins>
             <plugin>
