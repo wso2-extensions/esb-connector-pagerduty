@@ -1,0 +1,32 @@
+{
+  "id": "http:\/\/wso2jsonschema.org",
+  "title": "root",
+  "$schema": "http:\/\/json-schema.org\/draft-04\/schema#",
+  "properties": {
+    "incidents": {
+      "id": "http:\/\/wso2jsonschema.org\/incidents",
+      "items": [
+        {
+          "id": "http:\/\/wso2jsonschema.org\/incidents\/0",
+          "properties": {
+            "id": {
+              "id": "http:\/\/wso2jsonschema.org\/incidents\/0\/id",
+              "type": "string"
+            },
+            "status": {
+              "id": "http:\/\/wso2jsonschema.org\/incidents\/0\/status",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "type": "array"
+    },
+    "requesterId": {
+      "id": "http:\/\/wso2jsonschema.org\/requesterId",
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

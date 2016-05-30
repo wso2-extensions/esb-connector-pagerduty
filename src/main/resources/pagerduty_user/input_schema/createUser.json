@@ -1,0 +1,28 @@
+{
+  "id": "http:\/\/wso2jsonschema.org",
+  "title": "root",
+  "$schema": "http:\/\/json-schema.org\/draft-04\/schema#",
+  "properties": {
+    "email": {
+      "id": "http:\/\/wso2jsonschema.org\/email",
+      "type": "string"
+    },
+    "requesterId": {
+      "id": "http:\/\/wso2jsonschema.org\/requesterId",
+      "type": "string"
+    },
+    "name": {
+      "id": "http:\/\/wso2jsonschema.org\/name",
+      "type": "string"
+    },
+    "role": {
+      "id": "http:\/\/wso2jsonschema.org\/role",
+      "type": "string"
+    },
+    "jobTitle": {
+      "id": "http:\/\/wso2jsonschema.org\/jobTitle",
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

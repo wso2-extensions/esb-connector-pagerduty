@@ -1,0 +1,28 @@
+{
+  "id": "http:\/\/wso2jsonschema.org",
+  "title": "root",
+  "$schema": "http:\/\/json-schema.org\/draft-04\/schema#",
+  "properties": {
+    "incidentId": {
+      "id": "http:\/\/wso2jsonschema.org\/incidentId",
+      "type": "string"
+    },
+    "requesterId": {
+      "id": "http:\/\/wso2jsonschema.org\/requesterId",
+      "type": "string"
+    },
+    "escalationPolicy": {
+      "id": "http:\/\/wso2jsonschema.org\/escalationPolicy",
+      "type": "string"
+    },
+    "escalationLevel": {
+      "id": "http:\/\/wso2jsonschema.org\/escalationLevel",
+      "type": "string"
+    },
+    "assignedToUser": {
+      "id": "http:\/\/wso2jsonschema.org\/assignedToUser",
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

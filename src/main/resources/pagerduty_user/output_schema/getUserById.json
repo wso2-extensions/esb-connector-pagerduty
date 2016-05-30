@@ -1,0 +1,158 @@
+{
+  "id": "http:\/\/wso2jsonschema.org",
+  "title": "user",
+  "$schema": "http:\/\/json-schema.org\/draft-04\/schema#",
+  "properties": {
+    "avatar_url": {
+      "id": "http:\/\/wso2jsonschema.org\/avatar_url",
+      "type": "string"
+    },
+    "user_url": {
+      "id": "http:\/\/wso2jsonschema.org\/user_url",
+      "type": "string"
+    },
+    "id": {
+      "id": "http:\/\/wso2jsonschema.org\/id",
+      "type": "string"
+    },
+    "time_zone": {
+      "id": "http:\/\/wso2jsonschema.org\/time_zone",
+      "type": "string"
+    },
+    "billed": {
+      "id": "http:\/\/wso2jsonschema.org\/billed",
+      "type": "boolean"
+    },
+    "invitation_sent": {
+      "id": "http:\/\/wso2jsonschema.org\/invitation_sent",
+      "type": "boolean"
+    },
+    "email": {
+      "id": "http:\/\/wso2jsonschema.org\/email",
+      "type": "string"
+    },
+    "color": {
+      "id": "http:\/\/wso2jsonschema.org\/color",
+      "type": "string"
+    },
+    "contact_methods": {
+      "id": "http:\/\/wso2jsonschema.org\/contact_methods",
+      "items": [
+        {
+          "id": "http:\/\/wso2jsonschema.org\/contact_methods\/0",
+          "properties": {
+            "id": {
+              "id": "http:\/\/wso2jsonschema.org\/contact_methods\/0\/id",
+              "type": "string"
+            },
+            "email": {
+              "id": "http:\/\/wso2jsonschema.org\/contact_methods\/0\/email",
+              "type": "string"
+            },
+            "address": {
+              "id": "http:\/\/wso2jsonschema.org\/contact_methods\/0\/address",
+              "type": "string"
+            },
+            "user_id": {
+              "id": "http:\/\/wso2jsonschema.org\/contact_methods\/0\/user_id",
+              "type": "string"
+            },
+            "label": {
+              "id": "http:\/\/wso2jsonschema.org\/contact_methods\/0\/label",
+              "type": "string"
+            },
+            "type": {
+              "id": "http:\/\/wso2jsonschema.org\/contact_methods\/0\/type",
+              "type": "string"
+            },
+            "send_short_email": {
+              "id": "http:\/\/wso2jsonschema.org\/contact_methods\/0\/send_short_email",
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "type": "array"
+    },
+    "job_title": {
+      "id": "http:\/\/wso2jsonschema.org\/job_title",
+      "type": "string"
+    },
+    "name": {
+      "id": "http:\/\/wso2jsonschema.org\/name",
+      "type": "string"
+    },
+    "role": {
+      "id": "http:\/\/wso2jsonschema.org\/role",
+      "type": "string"
+    },
+    "marketing_opt_out": {
+      "id": "http:\/\/wso2jsonschema.org\/marketing_opt_out",
+      "type": "boolean"
+    },
+    "notification_rules": {
+      "id": "http:\/\/wso2jsonschema.org\/notification_rules",
+      "items": [
+        {
+          "id": "http:\/\/wso2jsonschema.org\/notification_rules\/0",
+          "properties": {
+            "id": {
+              "id": "http:\/\/wso2jsonschema.org\/notification_rules\/0\/id",
+              "type": "string"
+            },
+            "contact_method": {
+              "id": "http:\/\/wso2jsonschema.org\/notification_rules\/0\/contact_method",
+              "properties": {
+                "id": {
+                  "id": "http:\/\/wso2jsonschema.org\/notification_rules\/0\/contact_method\/id",
+                  "type": "string"
+                },
+                "email": {
+                  "id": "http:\/\/wso2jsonschema.org\/notification_rules\/0\/contact_method\/email",
+                  "type": "string"
+                },
+                "address": {
+                  "id": "http:\/\/wso2jsonschema.org\/notification_rules\/0\/contact_method\/address",
+                  "type": "string"
+                },
+                "user_id": {
+                  "id": "http:\/\/wso2jsonschema.org\/notification_rules\/0\/contact_method\/user_id",
+                  "type": "string"
+                },
+                "label": {
+                  "id": "http:\/\/wso2jsonschema.org\/notification_rules\/0\/contact_method\/label",
+                  "type": "string"
+                },
+                "type": {
+                  "id": "http:\/\/wso2jsonschema.org\/notification_rules\/0\/contact_method\/type",
+                  "type": "string"
+                },
+                "send_short_email": {
+                  "id": "http:\/\/wso2jsonschema.org\/notification_rules\/0\/contact_method\/send_short_email",
+                  "type": "boolean"
+                }
+              },
+              "type": "object"
+            },
+            "created_at": {
+              "id": "http:\/\/wso2jsonschema.org\/notification_rules\/0\/created_at",
+              "type": "string"
+            },
+            "start_delay_in_minutes": {
+              "id": "http:\/\/wso2jsonschema.org\/notification_rules\/0\/start_delay_in_minutes",
+              "type": "number"
+            },
+            "urgency": {
+              "id": "http:\/\/wso2jsonschema.org\/notification_rules\/0\/urgency",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "type": "array"
+    }
+  },
+  "type": "object"
+}
