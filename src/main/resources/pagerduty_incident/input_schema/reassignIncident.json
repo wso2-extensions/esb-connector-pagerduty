@@ -7,16 +7,8 @@
       "id": "http:\/\/wso2jsonschema.org\/incidentId",
       "type": "string"
     },
-    "apiToken": {
-      "id": "http:\/\/wso2jsonschema.org\/apiToken",
-      "type": "string"
-    },
     "requesterId": {
       "id": "http:\/\/wso2jsonschema.org\/requesterId",
-      "type": "string"
-    },
-    "apiUrl": {
-      "id": "http:\/\/wso2jsonschema.org\/apiUrl",
       "type": "string"
     },
     "escalationPolicy": {

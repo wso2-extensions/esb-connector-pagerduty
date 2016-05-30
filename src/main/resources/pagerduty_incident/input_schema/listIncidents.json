@@ -15,20 +15,12 @@
       "id": "http:\/\/wso2jsonschema.org\/sortBy",
       "type": "string"
     },
-    "apiToken": {
-      "id": "http:\/\/wso2jsonschema.org\/apiToken",
-      "type": "string"
-    },
     "status": {
       "id": "http:\/\/wso2jsonschema.org\/status",
       "type": "string"
     },
     "service": {
       "id": "http:\/\/wso2jsonschema.org\/service",
-      "type": "string"
-    },
-    "apiUrl": {
-      "id": "http:\/\/wso2jsonschema.org\/apiUrl",
       "type": "string"
     },
     "incidentKey": {
