@@ -22,6 +22,10 @@
             <file>createIncident.xml</file>
             <description>Create a new event or incident.</description>
         </component>
+        <component name="updateIncident">
+            <file>updateIncident.xml</file>
+            <description>Update an incident.</description>
+        </component>
         <component name="getIncidentById">
             <file>getIncidentById.xml</file>
             <description>Retrieve incident by the incident ID.</description>

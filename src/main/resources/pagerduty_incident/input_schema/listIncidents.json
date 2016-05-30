@@ -1,0 +1,64 @@
+{
+  "id": "http:\/\/wso2jsonschema.org",
+  "title": "root",
+  "$schema": "http:\/\/json-schema.org\/draft-04\/schema#",
+  "properties": {
+    "limit": {
+      "id": "http:\/\/wso2jsonschema.org\/limit",
+      "type": "string"
+    },
+    "dateRange": {
+      "id": "http:\/\/wso2jsonschema.org\/dateRange",
+      "type": "string"
+    },
+    "sortBy": {
+      "id": "http:\/\/wso2jsonschema.org\/sortBy",
+      "type": "string"
+    },
+    "apiToken": {
+      "id": "http:\/\/wso2jsonschema.org\/apiToken",
+      "type": "string"
+    },
+    "status": {
+      "id": "http:\/\/wso2jsonschema.org\/status",
+      "type": "string"
+    },
+    "service": {
+      "id": "http:\/\/wso2jsonschema.org\/service",
+      "type": "string"
+    },
+    "apiUrl": {
+      "id": "http:\/\/wso2jsonschema.org\/apiUrl",
+      "type": "string"
+    },
+    "incidentKey": {
+      "id": "http:\/\/wso2jsonschema.org\/incidentKey",
+      "type": "string"
+    },
+    "timeZone": {
+      "id": "http:\/\/wso2jsonschema.org\/timeZone",
+      "type": "string"
+    },
+    "since": {
+      "id": "http:\/\/wso2jsonschema.org\/since",
+      "type": "string"
+    },
+    "assignedToUser": {
+      "id": "http:\/\/wso2jsonschema.org\/assignedToUser",
+      "type": "string"
+    },
+    "offset": {
+      "id": "http:\/\/wso2jsonschema.org\/offset",
+      "type": "string"
+    },
+    "until": {
+      "id": "http:\/\/wso2jsonschema.org\/until",
+      "type": "string"
+    },
+    "fields": {
+      "id": "http:\/\/wso2jsonschema.org\/fields",
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

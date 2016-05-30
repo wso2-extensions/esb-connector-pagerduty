@@ -1,0 +1,202 @@
+{
+  "id": "http:\/\/wso2jsonschema.org",
+  "title": "root",
+  "$schema": "http:\/\/json-schema.org\/draft-04\/schema#",
+  "properties": {
+    "last_status_change_on": {
+      "id": "http:\/\/wso2jsonschema.org\/last_status_change_on",
+      "type": "string"
+    },
+    "status": {
+      "id": "http:\/\/wso2jsonschema.org\/status",
+      "type": "string"
+    },
+    "created_on": {
+      "id": "http:\/\/wso2jsonschema.org\/created_on",
+      "type": "string"
+    },
+    "last_status_change_by": {
+      "id": "http:\/\/wso2jsonschema.org\/last_status_change_by",
+      "type": "null"
+    },
+    "incident_key": {
+      "id": "http:\/\/wso2jsonschema.org\/incident_key",
+      "type": "string"
+    },
+    "trigger_type": {
+      "id": "http:\/\/wso2jsonschema.org\/trigger_type",
+      "type": "string"
+    },
+    "pending_actions": {
+      "id": "http:\/\/wso2jsonschema.org\/pending_actions",
+      "items": [
+        {
+          "id": "http:\/\/wso2jsonschema.org\/pending_actions\/0",
+          "properties": {
+            "at": {
+              "id": "http:\/\/wso2jsonschema.org\/pending_actions\/0\/at",
+              "type": "string"
+            },
+            "type": {
+              "id": "http:\/\/wso2jsonschema.org\/pending_actions\/0\/type",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "type": "array"
+    },
+    "incident_number": {
+      "id": "http:\/\/wso2jsonschema.org\/incident_number",
+      "type": "number"
+    },
+    "urgency": {
+      "id": "http:\/\/wso2jsonschema.org\/urgency",
+      "type": "string"
+    },
+    "assigned_to": {
+      "id": "http:\/\/wso2jsonschema.org\/assigned_to",
+      "items": [
+        {
+          "id": "http:\/\/wso2jsonschema.org\/assigned_to\/0",
+          "properties": {
+            "at": {
+              "id": "http:\/\/wso2jsonschema.org\/assigned_to\/0\/at",
+              "type": "string"
+            },
+            "object": {
+              "id": "http:\/\/wso2jsonschema.org\/assigned_to\/0\/object",
+              "properties": {
+                "html_url": {
+                  "id": "http:\/\/wso2jsonschema.org\/assigned_to\/0\/object\/html_url",
+                  "type": "string"
+                },
+                "id": {
+                  "id": "http:\/\/wso2jsonschema.org\/assigned_to\/0\/object\/id",
+                  "type": "string"
+                },
+                "email": {
+                  "id": "http:\/\/wso2jsonschema.org\/assigned_to\/0\/object\/email",
+                  "type": "string"
+                },
+                "name": {
+                  "id": "http:\/\/wso2jsonschema.org\/assigned_to\/0\/object\/name",
+                  "type": "string"
+                },
+                "type": {
+                  "id": "http:\/\/wso2jsonschema.org\/assigned_to\/0\/object\/type",
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "type": "object"
+        }
+      ],
+      "type": "array"
+    },
+    "id": {
+      "id": "http:\/\/wso2jsonschema.org\/id",
+      "type": "string"
+    },
+    "html_url": {
+      "id": "http:\/\/wso2jsonschema.org\/html_url",
+      "type": "string"
+    },
+    "assigned_to_user": {
+      "id": "http:\/\/wso2jsonschema.org\/assigned_to_user",
+      "properties": {
+        "html_url": {
+          "id": "http:\/\/wso2jsonschema.org\/assigned_to_user\/html_url",
+          "type": "string"
+        },
+        "id": {
+          "id": "http:\/\/wso2jsonschema.org\/assigned_to_user\/id",
+          "type": "string"
+        },
+        "email": {
+          "id": "http:\/\/wso2jsonschema.org\/assigned_to_user\/email",
+          "type": "string"
+        },
+        "name": {
+          "id": "http:\/\/wso2jsonschema.org\/assigned_to_user\/name",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "number_of_escalations": {
+      "id": "http:\/\/wso2jsonschema.org\/number_of_escalations",
+      "type": "number"
+    },
+    "service": {
+      "id": "http:\/\/wso2jsonschema.org\/service",
+      "properties": {
+        "html_url": {
+          "id": "http:\/\/wso2jsonschema.org\/service\/html_url",
+          "type": "string"
+        },
+        "id": {
+          "id": "http:\/\/wso2jsonschema.org\/service\/id",
+          "type": "string"
+        },
+        "description": {
+          "id": "http:\/\/wso2jsonschema.org\/service\/description",
+          "type": "string"
+        },
+        "name": {
+          "id": "http:\/\/wso2jsonschema.org\/service\/name",
+          "type": "string"
+        },
+        "deleted_at": {
+          "id": "http:\/\/wso2jsonschema.org\/service\/deleted_at",
+          "type": "null"
+        }
+      },
+      "type": "object"
+    },
+    "escalation_policy": {
+      "id": "http:\/\/wso2jsonschema.org\/escalation_policy",
+      "properties": {
+        "id": {
+          "id": "http:\/\/wso2jsonschema.org\/escalation_policy\/id",
+          "type": "string"
+        },
+        "name": {
+          "id": "http:\/\/wso2jsonschema.org\/escalation_policy\/name",
+          "type": "string"
+        },
+        "deleted_at": {
+          "id": "http:\/\/wso2jsonschema.org\/escalation_policy\/deleted_at",
+          "type": "null"
+        }
+      },
+      "type": "object"
+    },
+    "trigger_summary_data": {
+      "id": "http:\/\/wso2jsonschema.org\/trigger_summary_data",
+      "properties": {
+        "client": {
+          "id": "http:\/\/wso2jsonschema.org\/trigger_summary_data\/client",
+          "type": "string"
+        },
+        "description": {
+          "id": "http:\/\/wso2jsonschema.org\/trigger_summary_data\/description",
+          "type": "string"
+        },
+        "client_url": {
+          "id": "http:\/\/wso2jsonschema.org\/trigger_summary_data\/client_url",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "trigger_details_html_url": {
+      "id": "http:\/\/wso2jsonschema.org\/trigger_details_html_url",
+      "type": "string"
+    }
+  },
+  "type": "object"
+}
