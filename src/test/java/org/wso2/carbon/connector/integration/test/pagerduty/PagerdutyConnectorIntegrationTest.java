@@ -45,7 +45,7 @@ public class PagerdutyConnectorIntegrationTest extends ConnectorIntegrationTestB
     @BeforeClass(alwaysRun = true)
     public void setEnvironment() throws Exception {
 
-        init("pagerduty-connector-1.0.1-SNAPSHOT");
+        init("pagerduty-connector-1.0.1");
 
         esbRequestHeadersMap = new HashMap<String, String>();
         apiRequestHeadersMap = new HashMap<String, String>();
