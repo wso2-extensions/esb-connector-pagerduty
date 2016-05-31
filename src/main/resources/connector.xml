@@ -24,6 +24,7 @@
         <dependency component="pagerduty_user"/>
         <dependency component="pagerduty_contactMethod"/>
         <description>Pagerduty connector libraries</description>
+        <authenticationInfo>https://docs.wso2.com/display/ESBCONNECTORS/Configuring+PagerDuty+Operations</authenticationInfo>
     </component>
     <icon>icon/icon-small.gif</icon>
 </connector>
