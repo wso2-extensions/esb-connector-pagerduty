@@ -53,5 +53,7 @@ STEPS:
    xvi) incidentNote          -  Use a valid string value for the note to be added to an incident.
    xvii)timeOut               -  Use a valid number of milliseconds to wait till the request has effected. (Recommended value is 5000)
 
+Note: The values of following pairs userEmail & userEmailOpt, userName & userNameOpt, and incidentKey & incidentKeyOpt cannot be same.
+
 6. Navigate to "{PAGERDUTY_CONNECTOR_HOME}/" and run the following command.
       $ mvn clean install
