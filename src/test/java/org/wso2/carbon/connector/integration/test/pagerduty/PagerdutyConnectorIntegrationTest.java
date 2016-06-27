@@ -58,6 +58,19 @@ public class PagerdutyConnectorIntegrationTest extends ConnectorIntegrationTestB
         apiRequestHeadersMap.put("Authorization", "Token token=" + connectorProperties.getProperty("apiToken"));
 
         apiUrl = connectorProperties.getProperty("apiUrl") + "/api/v1";
+
+        String userEmail = System.currentTimeMillis() + connectorProperties.getProperty("userEmail");
+        String userName = System.currentTimeMillis() + connectorProperties.getProperty("userName");
+        String userEmailOpt = System.currentTimeMillis() + connectorProperties.getProperty("userEmailOpt");
+        String userNameOpt = System.currentTimeMillis() + connectorProperties.getProperty("userNameOpt");
+        String incidentKey = System.currentTimeMillis() + connectorProperties.getProperty("incidentKey");
+        String incidentKeyOpt = System.currentTimeMillis() + connectorProperties.getProperty("incidentKeyOpt");
+        connectorProperties.setProperty("userEmail", userEmail);
+        connectorProperties.setProperty("userName", userName);
+        connectorProperties.setProperty("userEmailOpt", userEmailOpt);
+        connectorProperties.setProperty("userNameOpt", userNameOpt);
+        connectorProperties.setProperty("incidentKey", incidentKey);
+        connectorProperties.setProperty("incidentKeyOpt", incidentKeyOpt);
     }
 
     /**
@@ -447,7 +460,6 @@ public class PagerdutyConnectorIntegrationTest extends ConnectorIntegrationTestB
 
         final String apiEndPoint = apiUrl + "/incidents?incident_key=" + connectorProperties.getProperty("incidentKey");
         final RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndPoint, "GET", apiRequestHeadersMap);
-
         Assert.assertEquals(apiRestResponse.getBody().getInt("total"), 1);
 
         connectorProperties.setProperty("incidentIdMandatory", apiRestResponse.getBody().getJSONArray("incidents")
@@ -632,9 +644,8 @@ public class PagerdutyConnectorIntegrationTest extends ConnectorIntegrationTestB
 
         Assert.assertEquals(esbRestResponse.getBody().getJSONObject("error").getString("message"), apiRestResponse
                 .getBody().getJSONObject("error").getString("message"));
-        Assert.assertEquals(esbRestResponse.getBody().getJSONObject("error").getJSONObject("errors")
-                        .getJSONArray("limit").getString(0),
-                apiRestResponse.getBody().getJSONObject("error").getJSONObject("errors").getJSONArray("limit").getString(0));
+        Assert.assertEquals(esbRestResponse.getBody().getJSONObject("error").getJSONArray("errors").toString(),
+                apiRestResponse.getBody().getJSONObject("error").getJSONArray("errors").toString());
     }
 
     /**
