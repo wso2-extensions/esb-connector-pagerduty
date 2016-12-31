@@ -1,0 +1,35 @@
+{
+  "$schema": "http:\/\/wso2.org\/json-schema\/wso2-data-mapper-v5.0.0\/schema#",
+  "id": "http:\/\/wso2jsonschema.org",
+  "title": "root",
+  "type": "object",
+  "properties": {
+    "include": {
+      "id": "http:\/\/wso2jsonschema.org\/include",
+      "type": "array",
+      "nullable": "true",
+      "items": [
+        {
+          "id": "http:\/\/wso2jsonschema.org\/include\/0",
+          "type": "string"
+        }
+      ]
+    },
+    "teamIDs": {
+      "id": "http:\/\/wso2jsonschema.org\/teamIDs",
+      "type": "array",
+      "nullable": "true",
+      "items": [
+        {
+          "id": "http:\/\/wso2jsonschema.org\/teamIDs\/0",
+          "type": "string"
+        }
+      ]
+    },
+    "query": {
+      "id": "http:\/\/wso2jsonschema.org\/query",
+      "type": "string",
+      "nullable": "true"
+    }
+  }
+}

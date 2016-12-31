@@ -1,0 +1,306 @@
+{
+  "$schema": "http:\/\/wso2.org\/json-schema\/wso2-data-mapper-v5.0.0\/schema#",
+  "id": "http:\/\/wso2jsonschema.org",
+  "title": "root",
+  "type": "object",
+  "properties": {
+    "log_entries": {
+      "id": "http:\/\/wso2jsonschema.org\/log_entries",
+      "type": "array",
+      "items": [
+        {
+          "id": "http:\/\/wso2jsonschema.org\/log_entries\/0",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/id",
+              "type": "string"
+            },
+            "type": {
+              "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/type",
+              "type": "string"
+            },
+            "summary": {
+              "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/summary",
+              "type": "string"
+            },
+            "self": {
+              "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/self",
+              "type": "string"
+            },
+            "html_url": {
+              "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/html_url",
+              "type": "string"
+            },
+            "created_at": {
+              "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/created_at",
+              "type": "string"
+            },
+            "agent": {
+              "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/agent",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/agent\/id",
+                  "type": "string"
+                },
+                "type": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/agent\/type",
+                  "type": "string"
+                },
+                "summary": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/agent\/summary",
+                  "type": "string"
+                },
+                "self": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/agent\/self",
+                  "type": "string"
+                },
+                "html_url": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/agent\/html_url",
+                  "type": "string"
+                }
+              }
+            },
+            "channel": {
+              "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/channel",
+              "type": "object",
+              "properties": {
+                "type": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/channel\/type",
+                  "type": "string"
+                },
+                "summary": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/channel\/summary",
+                  "type": "string"
+                },
+                "client_url": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/channel\/client_url",
+                  "type": "string"
+                },
+                "client": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/channel\/client",
+                  "type": "string"
+                }
+              }
+            },
+            "service": {
+              "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/id",
+                  "type": "string"
+                },
+                "name": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/name",
+                  "type": "string"
+                },
+                "description": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/description",
+                  "type": "string"
+                },
+                "auto_resolve_timeout": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/auto_resolve_timeout",
+                  "type": "number"
+                },
+                "acknowledgement_timeout": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/acknowledgement_timeout",
+                  "type": "number"
+                },
+                "created_at": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/created_at",
+                  "type": "string"
+                },
+                "status": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/status",
+                  "type": "string"
+                },
+                "last_incident_timestamp": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/last_incident_timestamp",
+                  "type": "string"
+                },
+                "incident_urgency_rule": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/incident_urgency_rule",
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/incident_urgency_rule\/type",
+                      "type": "string"
+                    },
+                    "urgency": {
+                      "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/incident_urgency_rule\/urgency",
+                      "type": "string"
+                    }
+                  }
+                },
+                "support_hours": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/support_hours",
+                  "type": "null"
+                },
+                "escalation_policy": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/escalation_policy",
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/escalation_policy\/id",
+                      "type": "string"
+                    },
+                    "type": {
+                      "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/escalation_policy\/type",
+                      "type": "string"
+                    },
+                    "summary": {
+                      "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/escalation_policy\/summary",
+                      "type": "string"
+                    },
+                    "self": {
+                      "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/escalation_policy\/self",
+                      "type": "string"
+                    },
+                    "html_url": {
+                      "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/escalation_policy\/html_url",
+                      "type": "string"
+                    }
+                  }
+                },
+                "privilege": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/privilege",
+                  "type": "null"
+                },
+                "alert_creation": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/alert_creation",
+                  "type": "string"
+                },
+                "integrations": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/integrations",
+                  "type": "array",
+                  "items": [
+                    {
+                      "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/integrations\/0",
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/integrations\/0\/id",
+                          "type": "string"
+                        },
+                        "type": {
+                          "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/integrations\/0\/type",
+                          "type": "string"
+                        },
+                        "summary": {
+                          "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/integrations\/0\/summary",
+                          "type": "string"
+                        },
+                        "self": {
+                          "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/integrations\/0\/self",
+                          "type": "string"
+                        },
+                        "html_url": {
+                          "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/integrations\/0\/html_url",
+                          "type": "string"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "type": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/type",
+                  "type": "string"
+                },
+                "summary": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/summary",
+                  "type": "string"
+                },
+                "self": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/self",
+                  "type": "string"
+                },
+                "html_url": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/service\/html_url",
+                  "type": "string"
+                }
+              }
+            },
+            "incident": {
+              "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/incident",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/incident\/id",
+                  "type": "string"
+                },
+                "type": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/incident\/type",
+                  "type": "string"
+                },
+                "summary": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/incident\/summary",
+                  "type": "string"
+                },
+                "self": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/incident\/self",
+                  "type": "string"
+                },
+                "html_url": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/incident\/html_url",
+                  "type": "string"
+                }
+              }
+            },
+            "contexts": {
+              "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/contexts",
+              "type": "array",
+              "items": [
+                {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/contexts\/0",
+                  "type": "object",
+                  "properties": {
+                    "href": {
+                      "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/contexts\/0\/href",
+                      "type": "string"
+                    },
+                    "text": {
+                      "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/contexts\/0\/text",
+                      "type": "string"
+                    },
+                    "type": {
+                      "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/contexts\/0\/type",
+                      "type": "string"
+                    }
+                  }
+                }
+              ]
+            },
+            "event_details": {
+              "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/event_details",
+              "type": "object",
+              "properties": {
+                "description": {
+                  "id": "http:\/\/wso2jsonschema.org\/log_entries\/0\/event_details\/description",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "limit": {
+      "id": "http:\/\/wso2jsonschema.org\/limit",
+      "type": "number"
+    },
+    "offset": {
+      "id": "http:\/\/wso2jsonschema.org\/offset",
+      "type": "number"
+    },
+    "more": {
+      "id": "http:\/\/wso2jsonschema.org\/more",
+      "type": "boolean"
+    },
+    "total": {
+      "id": "http:\/\/wso2jsonschema.org\/total",
+      "type": "number"
+    }
+  }
+}

@@ -3,5 +3,5 @@
   "apiToken": "%s(apiToken)",
   "name": "%s(userName)",
   "email": "%s(userEmail)",
-  "requesterId": "%s(requesterId)"
+  "from" : "%s(from)"
 }

@@ -2,7 +2,7 @@
   "apiUrl": "%s(apiUrl)",
   "apiToken": "%s(apiToken)",
   "userId": "%s(userIdOptional)",
-  "type": "email",
+  "type": "email_contact_method",
   "address": "%s(userEmail)",
   "label": "%s(contactMethodLabel)",
   "isSendShortEmail": "true"

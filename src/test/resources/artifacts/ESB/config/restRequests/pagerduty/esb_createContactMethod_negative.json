@@ -3,5 +3,5 @@
   "apiToken": "%s(apiToken)",
   "userId": "%s(userIdMandatory)",
   "type": "invalid",
-  "address": "%s(contactPhoneNumber)"
+  "address": "%s(contactEmail)"
 }

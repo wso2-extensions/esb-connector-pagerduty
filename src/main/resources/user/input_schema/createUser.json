@@ -1,0 +1,49 @@
+{
+  "$schema": "http:\/\/wso2.org\/json-schema\/wso2-data-mapper-v5.0.0\/schema#",
+  "id": "http:\/\/wso2jsonschema.org",
+  "title": "root",
+  "type": "object",
+  "properties": {
+    "from": {
+      "id": "http:\/\/wso2jsonschema.org\/from",
+      "type": "string"
+    },
+    "role": {
+      "id": "http:\/\/wso2jsonschema.org\/role",
+      "type": "string",
+      "nullable": "true"
+    },
+    "name": {
+      "id": "http:\/\/wso2jsonschema.org\/name",
+      "type": "string"
+    },
+    "type": {
+      "id": "http:\/\/wso2jsonschema.org\/type",
+      "type": "string"
+    },
+    "email": {
+      "id": "http:\/\/wso2jsonschema.org\/email",
+      "type": "string"
+    },
+    "jobTitle": {
+      "id": "http:\/\/wso2jsonschema.org\/jobTitle",
+      "type": "string",
+      "nullable": "true"
+    },
+    "timeZone": {
+      "id": "http:\/\/wso2jsonschema.org\/timeZone",
+      "type": "string",
+      "nullable": "true"
+    },
+    "description": {
+      "id": "http:\/\/wso2jsonschema.org\/description",
+      "type": "string",
+      "nullable": "true"
+    },
+    "color": {
+      "id": "http:\/\/wso2jsonschema.org\/color",
+      "type": "string",
+      "nullable": "true"
+    }
+  }
+}

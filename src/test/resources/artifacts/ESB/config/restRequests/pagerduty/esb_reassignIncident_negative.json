@@ -1,7 +1,0 @@
-{
-  "apiUrl": "%s(apiUrl)",
-  "apiToken": "%s(apiToken)",
-  "incidentId": "%s(incidentIdMandatory)",
-  "requesterId": "Invalid",
-  "assignedToUser": "%s(userIdMandatory)"
-}

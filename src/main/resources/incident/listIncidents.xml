@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+~  Copyright (c) 2016, WSO2 Inc. (http://wso2.com) All Rights Reserved.
+~
+~  WSO2 Inc. licenses this file to you under the Apache License,
+~  Version 2.0 (the "License"); you may not use this file except
+~  in compliance with the License.
+~  You may obtain a copy of the License at
+~
+~   http://www.apache.org/licenses/LICENSE-2.0
+~
+~  Unless required by applicable law or agreed to in writing,
+~  software distributed under the License is distributed on an
+~  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+~  KIND, either express or implied.  See the License for the
+~  specific language governing permissions and limitations
+~  under the License.
+-->
+<template name="listIncidents" xmlns="http://ws.apache.org/ns/synapse">
+    <parameter name="since" description="The start of the date range to search."/>
+    <parameter name="until" description="The end of the date range to search."/>
+    <parameter name="dateRange" description="The parameter to get all request from begining by setting value to all."/>
+    <parameter name="statuses"
+               description="The status of incidents to list. Valid types are triggered, acknowledged and resolved."/>
+    <parameter name="incidentKey" description="The incident key value to search incidents."/>
+    <parameter name="serviceIDs" description="The array of service ids to list incidents for that service."/>
+    <parameter name="teamIDs" description="The array of team ids to list incidents related to these teams."/>
+    <parameter name="userIDs" description="The array of users ids to list incidents assigned to these users."/>
+    <parameter name="urgencies" description="The array of urgencies to list incidents with these urgencies."/>
+    <parameter name="timeZone" description="The time zone to retrive correnspoding incidents."/>
+    <parameter name="sortBy" description="The sorting field with the ascending or descending order."/>
+    <parameter name="include" description="TThe array of data containing what extra objects should be returned."/>
+    <sequence>
+        <property name="uri.var.since" expression="$func:since"/>
+        <property name="uri.var.until" expression="$func:until"/>
+        <property name="uri.var.dateRange" expression="$func:dateRange"/>
+        <property name="uri.var.statuses" expression="$func:statuses"/>
+        <property name="uri.var.incidentKey" expression="$func:incidentKey"/>
+        <property name="uri.var.serviceIDs" expression="$func:serviceIDs"/>
+        <property name="uri.var.teamIDs" expression="$func:teamIDs"/>
+        <property name="uri.var.userIDs" expression="$func:userIDs"/>
+        <property name="uri.var.urgencies" expression="$func:urgencies"/>
+        <property name="uri.var.timeZone" expression="$func:timeZone"/>
+        <property name="uri.var.sortBy" expression="$func:sortBy"/>
+        <property name="uri.var.include" expression="$func:include"/>
+        <property name="uri.var.urlQuery" value=""/>
+        <script language="js">
+            <![CDATA[
+            var since = mc.getProperty('uri.var.since');
+            var until = mc.getProperty('uri.var.until');
+            var dateRange = mc.getProperty('uri.var.dateRange');
+            var statuses = mc.getProperty('uri.var.statuses');
+            var incidentKey = mc.getProperty('uri.var.incidentKey');
+            var serviceIDs = mc.getProperty('uri.var.serviceIDs');
+            var teamIDs = mc.getProperty('uri.var.teamIDs');
+            var userIDs = mc.getProperty('uri.var.userIDs');
+            var urgencies = mc.getProperty('uri.var.urgencies');
+            var timeZone = mc.getProperty('uri.var.timeZone');
+            var sortBy = mc.getProperty('uri.var.sortBy');
+            var include = mc.getProperty('uri.var.include');
+            var urlQuery = "";
+            if (since != null && since != "") {
+               urlQuery += "since=" + encodeURI(since) + '&';
+            }
+            if (until != null && until != "") {
+               urlQuery += "until=" + encodeURI(until) + '&';
+            }
+            if (dateRange != null && dateRange != "") {
+               urlQuery += "date_range=" + dateRange + '&';
+            }
+            if (incidentKey != null && incidentKey != "") {
+               urlQuery += "incident_key=" + encodeURI(incidentKey) + '&';
+            }
+            if (statuses != null && statuses != "") {
+               statuses = eval("(" + statuses + ")");
+               for(status in statuses) {
+                  urlQuery += "statuses[]=" + statuses[status] + '&';
+               }
+            }
+            if (serviceIDs != null && serviceIDs != "") {
+               serviceIDs = eval("(" + serviceIDs + ")");
+               for(serviceId in serviceIDs) {
+                  urlQuery += "service_ids[]=" + serviceIDs[serviceId] + '&';
+               }
+            }
+            if (teamIDs != null && teamIDs != "") {
+               teamIDs = eval("(" + teamIDs + ")");
+               for(teamID in teamIDs) {
+                  urlQuery += "team_ids[]=" + teamIDs[teamID] + '&';
+               }
+            }
+            if (userIDs != null && userIDs != "") {
+               userIDs = eval("(" + userIDs + ")");
+               for(userID in userIDs) {
+                  urlQuery += "user_ids[]=" + userIDs[userID] + '&';
+               }
+            }
+            if (urgencies != null && urgencies != "") {
+               urgencies = eval("(" + urgencies + ")");
+               for(urgencyItem in urgencies) {
+                  urlQuery += "urgencies[]=" + urgencies[urgencyItem] + '&';
+               }
+            }
+            if (timeZone != null && timeZone != "") {
+               urlQuery += "time_zone=" + encodeURI(timeZone) + '&';
+            }
+            if (sortBy != null && sortBy != "") {
+               urlQuery += "sort_by=" + sortBy + '&';
+            }
+            if (include != null && include != "") {
+               include = eval("(" + include + ")");
+               for(includeItem in include) {
+                  urlQuery += "include[]=" + include[includeItem] + '&';
+               }
+            }
+            if (urlQuery != "") {
+               urlQuery = '?' + urlQuery.toString().substring(0, urlQuery.toString().lastIndexOf("&"));
+               mc.setProperty('uri.var.urlQuery', urlQuery);
+            }
+         ]]>
+        </script>
+        <call>
+            <endpoint>
+                <http method="get" uri-template="{uri.var.apiUrl}/incidents{+uri.var.urlQuery}"/>
+            </endpoint>
+        </call>
+        <property name="Content-Encoding" action="remove" scope="transport"/>
+        <header name="X-Request-Id" scope="transport" action="remove"/>
+        <header name="X-UA-Compatible" scope="transport" action="remove"/>
+        <header name="Status" scope="transport" action="remove"/>
+        <header name="ETag" scope="transport" action="remove"/>
+        <header name="Access-Control-Allow-Headers" scope="transport" action="remove"/>
+        <header name="Access-Control-Max-Age" scope="transport" action="remove"/>
+        <header name="Access-Control-Allow-Methods" scope="transport" action="remove"/>
+        <header name="WWW-Authenticate" scope="transport" action="remove"/>
+    </sequence>
+</template>

@@ -9,9 +9,8 @@ Product: Integration tests for WSO2 ESB PagerDuty connector
 
    Tested Platforms: 
 
-    - Microsoft WINDOWS V-7
-    - Ubuntu 13.04, Mac OSx 10.10.3
-    - WSO2 ESB 5.0.0-BETA
+    - Mac OSx 10.9.5
+    - WSO2 ESB 5.0.0
 
 STEPS:
 
@@ -37,7 +36,7 @@ STEPS:
 
    i)   apiUrl                -  API URL to which the service calls are made. e.g. https://virasoft.pagerduty.com.
    ii)  apiToken              -  API Key which is used as the security token obtained in Step 3 - iii.
-   iii) requesterId           -  Use the user ID retrieved in Step 3 - iv.
+   iii) from                  -  Use the user mail ID retrieved in Step 3 - iv.
    iv)  escalationPolicyId    -  The escalation policy ID created in Step 3 - vi.
    v)   userEmail             -  A unique email address for a user.
    vi)  userName              -  A unique name for a user.
@@ -49,7 +48,7 @@ STEPS:
    xii) incidentKey           -  Use a valid unique string for the key of the incident.
    xiii)incidentKeyOpt        -  Use a valid unique string for the key of the incident.
    xiv) contactMethodLabel    -  Use a valid string value for the label of the contact method.
-   xv)  contactPhoneNumber    -  Use a valid phone number.
+   xv)  contactEmail          -  Use a valid email address.
    xvi) incidentNote          -  Use a valid string value for the note to be added to an incident.
    xvii)timeOut               -  Use a valid number of milliseconds to wait till the request has effected. (Recommended value is 5000)
 

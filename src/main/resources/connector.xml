@@ -18,11 +18,11 @@
 -->
 <connector>
     <component name="pagerduty" package="org.wso2.carbon.connector">
-        <dependency component="pagerduty_config"/>
-        <dependency component="pagerduty_incident"/>
-        <dependency component="pagerduty_note"/>
-        <dependency component="pagerduty_user"/>
-        <dependency component="pagerduty_contactMethod"/>
+        <dependency component="config"/>
+        <dependency component="incident"/>
+        <dependency component="note"/>
+        <dependency component="user"/>
+        <dependency component="contactMethod"/>
         <description>Pagerduty connector libraries</description>
         <authenticationInfo>https://docs.wso2.com/display/ESBCONNECTORS/Configuring+PagerDuty+Operations</authenticationInfo>
     </component>

@@ -2,7 +2,5 @@
   "apiUrl": "%s(apiUrl)",
   "apiToken": "%s(apiToken)",
   "dateRange": "all",
-  "sortBy": "created_on:desc",
-  "limit": "10",
-  "offset": "0"
+  "sortBy": "created_at:desc"
 }

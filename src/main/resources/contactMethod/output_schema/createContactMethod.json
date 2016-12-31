@@ -1,0 +1,86 @@
+{
+  "$schema": "http:\/\/wso2.org\/json-schema\/wso2-data-mapper-v5.0.0\/schema#",
+  "id": "http:\/\/wso2jsonschema.org",
+  "title": "root",
+  "type": "object",
+  "properties": {
+    "contact_method": {
+      "id": "http:\/\/wso2jsonschema.org\/contact_method",
+      "type": "object",
+      "properties": {
+        "id": {
+          "id": "http:\/\/wso2jsonschema.org\/contact_method\/id",
+          "type": "string"
+        },
+        "type": {
+          "id": "http:\/\/wso2jsonschema.org\/contact_method\/type",
+          "type": "string"
+        },
+        "summary": {
+          "id": "http:\/\/wso2jsonschema.org\/contact_method\/summary",
+          "type": "string"
+        },
+        "self": {
+          "id": "http:\/\/wso2jsonschema.org\/contact_method\/self",
+          "type": "string"
+        },
+        "html_url": {
+          "id": "http:\/\/wso2jsonschema.org\/contact_method\/html_url",
+          "type": "string"
+        },
+        "label": {
+          "id": "http:\/\/wso2jsonschema.org\/contact_method\/label",
+          "type": "string"
+        },
+        "address": {
+          "id": "http:\/\/wso2jsonschema.org\/contact_method\/address",
+          "type": "string"
+        },
+        "country_code": {
+          "id": "http:\/\/wso2jsonschema.org\/contact_method\/country_code",
+          "type": "number"
+        },
+        "device_type": {
+          "id": "http:\/\/wso2jsonschema.org\/contact_method\/device_type",
+          "type": "string"
+        },
+        "send_short_email": {
+          "id": "http:\/\/wso2jsonschema.org\/contact_method\/send_short_email",
+          "type": "boolean"
+        },
+        "send_html_email": {
+          "id": "http:\/\/wso2jsonschema.org\/contact_method\/send_html_email",
+          "type": "boolean"
+        },
+        "sounds": {
+          "id": "http:\/\/wso2jsonschema.org\/contact_method\/sounds",
+          "type": "array",
+          "items": [
+            {
+              "id": "http:\/\/wso2jsonschema.org\/contact_method\/sounds\/0",
+              "type": "object",
+              "properties": {
+                "type": {
+                  "id": "http:\/\/wso2jsonschema.org\/contact_method\/sounds\/0\/type",
+                  "type": "string"
+                },
+                "file": {
+                  "id": "http:\/\/wso2jsonschema.org\/contact_method\/sounds\/0\/file",
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        },
+        "blacklisted": {
+          "id": "http:\/\/wso2jsonschema.org\/contact_method\/blacklisted",
+          "type": "boolean"
+        },
+        "created_at": {
+          "id": "http:\/\/wso2jsonschema.org\/contact_method\/created_at",
+          "type": "string"
+        }
+      }
+    }
+  }
+}
