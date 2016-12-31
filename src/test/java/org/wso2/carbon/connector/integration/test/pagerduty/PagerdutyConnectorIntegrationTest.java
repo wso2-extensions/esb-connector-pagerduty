@@ -88,7 +88,6 @@ public class PagerdutyConnectorIntegrationTest extends ConnectorIntegrationTestB
         connectorProperties.setProperty("userIdMandatory", userId);
 
         final String apiEndPoint = apiUrl + "/users/" + userId;
-        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \n\n\n\n\n\n@@@@@@@@@@@@@@@@@@@ " + apiEndPoint);
         final RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndPoint, "GET", apiRequestHeadersMap);
 
         Assert.assertEquals(apiRestResponse.getBody().getJSONObject("user").getString("name"),
