@@ -1,6 +1,6 @@
 {
   "contact_method": {
     "type": "invalid",
-    "address": "%s(contactPhoneNumber)"
+    "address": "%s(contactEmail)"
   }
 }

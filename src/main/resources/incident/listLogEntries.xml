@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+~  Copyright (c) 2016, WSO2 Inc. (http://wso2.com) All Rights Reserved.
+~
+~  WSO2 Inc. licenses this file to you under the Apache License,
+~  Version 2.0 (the "License"); you may not use this file except
+~  in compliance with the License.
+~  You may obtain a copy of the License at
+~
+~   http://www.apache.org/licenses/LICENSE-2.0
+~
+~  Unless required by applicable law or agreed to in writing,
+~  software distributed under the License is distributed on an
+~  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+~  KIND, either express or implied.  See the License for the
+~  specific language governing permissions and limitations
+~  under the License.
+-->
+<template name="listLogEntries" xmlns="http://ws.apache.org/ns/synapse">
+    <parameter name="incidentId" description="The unique identifier of the incident."/>
+    <parameter name="timeZone" description="The time zone to retrive correnspoding incidents."/>
+    <parameter name="isOverview"
+               description="If true, will return a subset of log entries that show only the most important changes to the incident."/>
+    <parameter name="include" description="The number of records to be returned."/>
+    <sequence>
+        <property name="uri.var.incidentId" expression="$func:incidentId"/>
+        <property name="uri.var.timeZone" expression="$func:timeZone"/>
+        <property name="uri.var.isOverview" expression="$func:isOverview"/>
+        <property name="uri.var.include" expression="$func:include"/>
+        <property name="uri.var.urlQuery" value=""/>
+        <script language="js">
+            <![CDATA[
+            var timeZone = mc.getProperty('uri.var.timeZone');
+            var isOverview = mc.getProperty('uri.var.isOverview');
+            var include = mc.getProperty('uri.var.include');
+            var urlQuery = "";
+            if (timeZone != null && timeZone != "") {
+               urlQuery += "time_zone=" + encodeURI(timeZone) + '&';
+            }
+            if (isOverview != null && isOverview != "") {
+               urlQuery += "is_overview=" + isOverview + '&';
+            }
+            if (include != null && include != "") {
+               include = eval("(" + include + ")");
+               for(includeItem in include) {
+                  urlQuery += "include[]=" + include[includeItem] + '&';
+               }
+            }
+            if (urlQuery != "") {
+               urlQuery = '?' + urlQuery.toString().substring(0, urlQuery.toString().lastIndexOf("&"));
+               mc.setProperty('uri.var.urlQuery', urlQuery);
+            }
+         ]]>
+        </script>
+        <call>
+            <endpoint>
+                <http method="get" uri-template="{uri.var.apiUrl}/incidents/{uri.var.incidentId}/log_entries{+uri.var.urlQuery}"/>
+            </endpoint>
+        </call>
+        <property name="Content-Encoding" action="remove" scope="transport"/>
+        <header name="X-Request-Id" scope="transport" action="remove"/>
+        <header name="X-UA-Compatible" scope="transport" action="remove"/>
+        <header name="Status" scope="transport" action="remove"/>
+        <header name="ETag" scope="transport" action="remove"/>
+        <header name="Access-Control-Allow-Headers" scope="transport" action="remove"/>
+        <header name="Access-Control-Max-Age" scope="transport" action="remove"/>
+        <header name="Access-Control-Allow-Methods" scope="transport" action="remove"/>
+        <header name="WWW-Authenticate" scope="transport" action="remove"/>
+    </sequence>
+</template>

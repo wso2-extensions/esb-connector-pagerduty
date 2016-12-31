@@ -2,6 +2,6 @@
   "apiUrl": "%s(apiUrl)",
   "apiToken": "%s(apiToken)",
   "incidentId": "%s(incidentIdMandatory)",
-  "requesterId": "%s(requesterId)",
+  "from": "%s(from)",
   "noteContent": "%s(incidentNote)"
 }

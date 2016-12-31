@@ -1,0 +1,170 @@
+{
+  "$schema": "http:\/\/wso2.org\/json-schema\/wso2-data-mapper-v5.0.0\/schema#",
+  "id": "http:\/\/wso2jsonschema.org",
+  "title": "root",
+  "type": "object",
+  "properties": {
+    "user": {
+      "id": "http:\/\/wso2jsonschema.org\/user",
+      "type": "object",
+      "properties": {
+        "name": {
+          "id": "http:\/\/wso2jsonschema.org\/user\/name",
+          "type": "string"
+        },
+        "email": {
+          "id": "http:\/\/wso2jsonschema.org\/user\/email",
+          "type": "string"
+        },
+        "time_zone": {
+          "id": "http:\/\/wso2jsonschema.org\/user\/time_zone",
+          "type": "string"
+        },
+        "color": {
+          "id": "http:\/\/wso2jsonschema.org\/user\/color",
+          "type": "string"
+        },
+        "avatar_url": {
+          "id": "http:\/\/wso2jsonschema.org\/user\/avatar_url",
+          "type": "string"
+        },
+        "billed": {
+          "id": "http:\/\/wso2jsonschema.org\/user\/billed",
+          "type": "boolean"
+        },
+        "role": {
+          "id": "http:\/\/wso2jsonschema.org\/user\/role",
+          "type": "string"
+        },
+        "description": {
+          "id": "http:\/\/wso2jsonschema.org\/user\/description",
+          "type": "string"
+        },
+        "invitation_sent": {
+          "id": "http:\/\/wso2jsonschema.org\/user\/invitation_sent",
+          "type": "boolean"
+        },
+        "contact_methods": {
+          "id": "http:\/\/wso2jsonschema.org\/user\/contact_methods",
+          "type": "array",
+          "items": [
+            {
+              "id": "http:\/\/wso2jsonschema.org\/user\/contact_methods\/0",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "id": "http:\/\/wso2jsonschema.org\/user\/contact_methods\/0\/id",
+                  "type": "string"
+                },
+                "type": {
+                  "id": "http:\/\/wso2jsonschema.org\/user\/contact_methods\/0\/type",
+                  "type": "string"
+                },
+                "summary": {
+                  "id": "http:\/\/wso2jsonschema.org\/user\/contact_methods\/0\/summary",
+                  "type": "string"
+                },
+                "self": {
+                  "id": "http:\/\/wso2jsonschema.org\/user\/contact_methods\/0\/self",
+                  "type": "string"
+                },
+                "html_url": {
+                  "id": "http:\/\/wso2jsonschema.org\/user\/contact_methods\/0\/html_url",
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        },
+        "notification_rules": {
+          "id": "http:\/\/wso2jsonschema.org\/user\/notification_rules",
+          "type": "array",
+          "items": [
+            {
+              "id": "http:\/\/wso2jsonschema.org\/user\/notification_rules\/0",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "id": "http:\/\/wso2jsonschema.org\/user\/notification_rules\/0\/id",
+                  "type": "string"
+                },
+                "type": {
+                  "id": "http:\/\/wso2jsonschema.org\/user\/notification_rules\/0\/type",
+                  "type": "string"
+                },
+                "summary": {
+                  "id": "http:\/\/wso2jsonschema.org\/user\/notification_rules\/0\/summary",
+                  "type": "string"
+                },
+                "self": {
+                  "id": "http:\/\/wso2jsonschema.org\/user\/notification_rules\/0\/self",
+                  "type": "string"
+                },
+                "html_url": {
+                  "id": "http:\/\/wso2jsonschema.org\/user\/notification_rules\/0\/html_url",
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        },
+        "job_title": {
+          "id": "http:\/\/wso2jsonschema.org\/user\/job_title",
+          "type": "string"
+        },
+        "teams": {
+          "id": "http:\/\/wso2jsonschema.org\/user\/teams",
+          "type": "array",
+          "items": [
+            {
+              "id": "http:\/\/wso2jsonschema.org\/user\/teams\/0",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "id": "http:\/\/wso2jsonschema.org\/user\/teams\/0\/id",
+                  "type": "string"
+                },
+                "type": {
+                  "id": "http:\/\/wso2jsonschema.org\/user\/teams\/0\/type",
+                  "type": "string"
+                },
+                "summary": {
+                  "id": "http:\/\/wso2jsonschema.org\/user\/teams\/0\/summary",
+                  "type": "string"
+                },
+                "self": {
+                  "id": "http:\/\/wso2jsonschema.org\/user\/teams\/0\/self",
+                  "type": "string"
+                },
+                "html_url": {
+                  "id": "http:\/\/wso2jsonschema.org\/user\/teams\/0\/html_url",
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        },
+        "id": {
+          "id": "http:\/\/wso2jsonschema.org\/user\/id",
+          "type": "string"
+        },
+        "type": {
+          "id": "http:\/\/wso2jsonschema.org\/user\/type",
+          "type": "string"
+        },
+        "summary": {
+          "id": "http:\/\/wso2jsonschema.org\/user\/summary",
+          "type": "string"
+        },
+        "self": {
+          "id": "http:\/\/wso2jsonschema.org\/user\/self",
+          "type": "string"
+        },
+        "html_url": {
+          "id": "http:\/\/wso2jsonschema.org\/user\/html_url",
+          "type": "string"
+        }
+      }
+    }
+  }
+}

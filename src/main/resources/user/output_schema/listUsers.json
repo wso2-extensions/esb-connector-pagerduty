@@ -1,0 +1,214 @@
+{
+  "$schema": "http:\/\/wso2.org\/json-schema\/wso2-data-mapper-v5.0.0\/schema#",
+  "id": "http:\/\/wso2jsonschema.org",
+  "title": "root",
+  "type": "object",
+  "properties": {
+    "users": {
+      "id": "http:\/\/wso2jsonschema.org\/users",
+      "type": "array",
+      "items": [
+        {
+          "id": "http:\/\/wso2jsonschema.org\/users\/0",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http:\/\/wso2jsonschema.org\/users\/0\/id",
+              "type": "string"
+            },
+            "type": {
+              "id": "http:\/\/wso2jsonschema.org\/users\/0\/type",
+              "type": "string"
+            },
+            "summary": {
+              "id": "http:\/\/wso2jsonschema.org\/users\/0\/summary",
+              "type": "string"
+            },
+            "self": {
+              "id": "http:\/\/wso2jsonschema.org\/users\/0\/self",
+              "type": "string"
+            },
+            "html_url": {
+              "id": "http:\/\/wso2jsonschema.org\/users\/0\/html_url",
+              "type": "string"
+            },
+            "name": {
+              "id": "http:\/\/wso2jsonschema.org\/users\/0\/name",
+              "type": "string"
+            },
+            "email": {
+              "id": "http:\/\/wso2jsonschema.org\/users\/0\/email",
+              "type": "string"
+            },
+            "time_zone": {
+              "id": "http:\/\/wso2jsonschema.org\/users\/0\/time_zone",
+              "type": "string"
+            },
+            "color": {
+              "id": "http:\/\/wso2jsonschema.org\/users\/0\/color",
+              "type": "string"
+            },
+            "role": {
+              "id": "http:\/\/wso2jsonschema.org\/users\/0\/role",
+              "type": "string"
+            },
+            "avatar_url": {
+              "id": "http:\/\/wso2jsonschema.org\/users\/0\/avatar_url",
+              "type": "string"
+            },
+            "description": {
+              "id": "http:\/\/wso2jsonschema.org\/users\/0\/description",
+              "type": "string"
+            },
+            "invitation_sent": {
+              "id": "http:\/\/wso2jsonschema.org\/users\/0\/invitation_sent",
+              "type": "boolean"
+            },
+            "contact_methods": {
+              "id": "http:\/\/wso2jsonschema.org\/users\/0\/contact_methods",
+              "type": "array",
+              "items": [
+                {
+                  "id": "http:\/\/wso2jsonschema.org\/users\/0\/contact_methods\/0",
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "id": "http:\/\/wso2jsonschema.org\/users\/0\/contact_methods\/0\/id",
+                      "type": "string"
+                    },
+                    "type": {
+                      "id": "http:\/\/wso2jsonschema.org\/users\/0\/contact_methods\/0\/type",
+                      "type": "string"
+                    },
+                    "summary": {
+                      "id": "http:\/\/wso2jsonschema.org\/users\/0\/contact_methods\/0\/summary",
+                      "type": "string"
+                    },
+                    "self": {
+                      "id": "http:\/\/wso2jsonschema.org\/users\/0\/contact_methods\/0\/self",
+                      "type": "string"
+                    },
+                    "html_url": {
+                      "id": "http:\/\/wso2jsonschema.org\/users\/0\/contact_methods\/0\/html_url",
+                      "type": "string"
+                    }
+                  }
+                }
+              ]
+            },
+            "notification_rules": {
+              "id": "http:\/\/wso2jsonschema.org\/users\/0\/notification_rules",
+              "type": "array",
+              "items": [
+                {
+                  "id": "http:\/\/wso2jsonschema.org\/users\/0\/notification_rules\/0",
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "id": "http:\/\/wso2jsonschema.org\/users\/0\/notification_rules\/0\/id",
+                      "type": "string"
+                    },
+                    "start_delay_in_minutes": {
+                      "id": "http:\/\/wso2jsonschema.org\/users\/0\/notification_rules\/0\/start_delay_in_minutes",
+                      "type": "number"
+                    },
+                    "created_at": {
+                      "id": "http:\/\/wso2jsonschema.org\/users\/0\/notification_rules\/0\/created_at",
+                      "type": "string"
+                    },
+                    "contact_method": {
+                      "id": "http:\/\/wso2jsonschema.org\/users\/0\/notification_rules\/0\/contact_method",
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "id": "http:\/\/wso2jsonschema.org\/users\/0\/notification_rules\/0\/contact_method\/id",
+                          "type": "string"
+                        },
+                        "type": {
+                          "id": "http:\/\/wso2jsonschema.org\/users\/0\/notification_rules\/0\/contact_method\/type",
+                          "type": "string"
+                        },
+                        "summary": {
+                          "id": "http:\/\/wso2jsonschema.org\/users\/0\/notification_rules\/0\/contact_method\/summary",
+                          "type": "string"
+                        },
+                        "self": {
+                          "id": "http:\/\/wso2jsonschema.org\/users\/0\/notification_rules\/0\/contact_method\/self",
+                          "type": "string"
+                        },
+                        "html_url": {
+                          "id": "http:\/\/wso2jsonschema.org\/users\/0\/notification_rules\/0\/contact_method\/html_url",
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "urgency": {
+                      "id": "http:\/\/wso2jsonschema.org\/users\/0\/notification_rules\/0\/urgency",
+                      "type": "string"
+                    },
+                    "type": {
+                      "id": "http:\/\/wso2jsonschema.org\/users\/0\/notification_rules\/0\/type",
+                      "type": "string"
+                    }
+                  }
+                }
+              ]
+            },
+            "job_title": {
+              "id": "http:\/\/wso2jsonschema.org\/users\/0\/job_title",
+              "type": "string"
+            },
+            "teams": {
+              "id": "http:\/\/wso2jsonschema.org\/users\/0\/teams",
+              "type": "array",
+              "items": [
+                {
+                  "id": "http:\/\/wso2jsonschema.org\/users\/0\/teams\/0",
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "id": "http:\/\/wso2jsonschema.org\/users\/0\/teams\/0\/id",
+                      "type": "string"
+                    },
+                    "type": {
+                      "id": "http:\/\/wso2jsonschema.org\/users\/0\/teams\/0\/type",
+                      "type": "string"
+                    },
+                    "summary": {
+                      "id": "http:\/\/wso2jsonschema.org\/users\/0\/teams\/0\/summary",
+                      "type": "string"
+                    },
+                    "self": {
+                      "id": "http:\/\/wso2jsonschema.org\/users\/0\/teams\/0\/self",
+                      "type": "string"
+                    },
+                    "html_url": {
+                      "id": "http:\/\/wso2jsonschema.org\/users\/0\/teams\/0\/html_url",
+                      "type": "string"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "limit": {
+      "id": "http:\/\/wso2jsonschema.org\/limit",
+      "type": "number"
+    },
+    "offset": {
+      "id": "http:\/\/wso2jsonschema.org\/offset",
+      "type": "number"
+    },
+    "total": {
+      "id": "http:\/\/wso2jsonschema.org\/total",
+      "type": "number"
+    },
+    "more": {
+      "id": "http:\/\/wso2jsonschema.org\/more",
+      "type": "boolean"
+    }
+  }
+}

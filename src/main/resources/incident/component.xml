@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+~  Copyright (c) 2016, WSO2 Inc. (http://wso2.com) All Rights Reserved.
+~
+~  WSO2 Inc. licenses this file to you under the Apache License,
+~  Version 2.0 (the "License"); you may not use this file except
+~  in compliance with the License.
+~  You may obtain a copy of the License at
+~
+~   http://www.apache.org/licenses/LICENSE-2.0
+~
+~  Unless required by applicable law or agreed to in writing,
+~  software distributed under the License is distributed on an
+~  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+~  KIND, either express or implied.  See the License for the
+~  specific language governing permissions and limitations
+~  under the License.
+-->
+<component name="incident" type="synapse/template">
+    <subComponents>
+        <component name="createIncident">
+            <file>createIncident.xml</file>
+            <description>Create a new event or incident.</description>
+        </component>
+        <component name="updateIncident">
+            <file>updateIncident.xml</file>
+            <description>Update an incident.</description>
+        </component>
+        <component name="manageIncidents">
+            <file>manageIncidents.xml</file>
+            <description>Acknowledge, resolve, escalate or reassign one or more incidents.</description>
+        </component>
+        <component name="listLogEntries">
+            <file>listLogEntries.xml</file>
+            <description>List log entries for the specified incident.</description>
+        </component>
+        <component name="getIncidentById">
+            <file>getIncidentById.xml</file>
+            <description>Retrieve incident by the incident ID.</description>
+        </component>
+        <component name="listIncidents">
+            <file>listIncidents.xml</file>
+            <description>List the incidents.</description>
+        </component>
+        <component name="snoozeIncident">
+            <file>snoozeIncident.xml</file>
+            <description>Snooze an incident.</description>
+        </component>
+    </subComponents>
+</component>

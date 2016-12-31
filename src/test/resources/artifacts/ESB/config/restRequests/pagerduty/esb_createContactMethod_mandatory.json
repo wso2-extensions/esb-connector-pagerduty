@@ -2,6 +2,6 @@
   "apiUrl": "%s(apiUrl)",
   "apiToken": "%s(apiToken)",
   "userId": "%s(userIdMandatory)",
-  "type": "phone",
-  "address": "%s(contactPhoneNumber)"
+  "type": "email_contact_method",
+  "address": "%s(contactEmail)"
 }

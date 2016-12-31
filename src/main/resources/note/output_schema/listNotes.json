@@ -1,0 +1,58 @@
+{
+  "$schema": "http:\/\/wso2.org\/json-schema\/wso2-data-mapper-v5.0.0\/schema#",
+  "id": "http:\/\/wso2jsonschema.org",
+  "title": "root",
+  "type": "object",
+  "properties": {
+    "notes": {
+      "id": "http:\/\/wso2jsonschema.org\/notes",
+      "type": "array",
+      "items": [
+        {
+          "id": "http:\/\/wso2jsonschema.org\/notes\/0",
+          "type": "object",
+          "properties": {
+            "id": {
+              "id": "http:\/\/wso2jsonschema.org\/notes\/0\/id",
+              "type": "string"
+            },
+            "user": {
+              "id": "http:\/\/wso2jsonschema.org\/notes\/0\/user",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "id": "http:\/\/wso2jsonschema.org\/notes\/0\/user\/id",
+                  "type": "string"
+                },
+                "type": {
+                  "id": "http:\/\/wso2jsonschema.org\/notes\/0\/user\/type",
+                  "type": "string"
+                },
+                "summary": {
+                  "id": "http:\/\/wso2jsonschema.org\/notes\/0\/user\/summary",
+                  "type": "string"
+                },
+                "self": {
+                  "id": "http:\/\/wso2jsonschema.org\/notes\/0\/user\/self",
+                  "type": "string"
+                },
+                "html_url": {
+                  "id": "http:\/\/wso2jsonschema.org\/notes\/0\/user\/html_url",
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "id": "http:\/\/wso2jsonschema.org\/notes\/0\/content",
+              "type": "string"
+            },
+            "created_at": {
+              "id": "http:\/\/wso2jsonschema.org\/notes\/0\/created_at",
+              "type": "string"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

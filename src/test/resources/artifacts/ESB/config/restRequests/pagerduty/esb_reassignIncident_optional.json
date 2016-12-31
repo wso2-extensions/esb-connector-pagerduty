@@ -1,8 +1,0 @@
-{
-  "apiUrl": "%s(apiUrl)",
-  "apiToken": "%s(apiToken)",
-  "incidentId": "%s(incidentIdOptional)",
-  "requesterId": "%s(requesterId)",
-  "escalationPolicy": "%s(escalationPolicyId)",
-  "escalationLevel": "1"
-}

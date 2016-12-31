@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   Copyright (c) 2005-2015, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+
+   WSO2 Inc. licenses this file to you under the Apache License,
+   Version 2.0 (the "License"); you may not use this file except
+   in compliance with the License.
+   You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied. See the License for the
+   specific language governing permissions and limitations
+   under the License.
+-->
+<template xmlns="http://ws.apache.org/ns/synapse" name="updateIncident">
+    <parameter name="incidentId" description="The unique identifier of the incident to update."/>
+    <parameter name="from" description="The email address of the user making the request."/>
+    <parameter name="type" description="The incident type."/>
+    <parameter name="status" description="The new status of the incident.Can be resolved or acknowledged."/>
+    <parameter name="resolution" description="The resolution for this incident if status is set to resolved."/>
+    <parameter name="escalationLevel" description="Escalate the incident to this level in the escalation policy."/>
+    <parameter name="assignments" description="Assign the incident to these assignees."/>
+    <parameter name="escalationPolicy" description="Delegate this incident to the specified escalation policy."/>
+    <sequence>
+        <property name="uri.var.incidentId" expression="$func:incidentId"/>
+        <property name="from" expression="$func:from"/>
+        <property name="type" expression="$func:type"/>
+        <property name="status" expression="$func:status"/>
+        <property name="resolution" expression="$func:resolution"/>
+        <property name="escalationLevel" expression="$func:escalationLevel"/>
+        <property name="assignments" expression="$func:assignments"/>
+        <property name="escalationPolicy" expression="$func:escalationPolicy"/>
+        <payloadFactory media-type="json">
+            <format>{
+                "incident":{
+                    "type":"$1"
+                }
+            </format>
+            <args>
+                <arg expression="$ctx:type"/>
+            </args>
+        </payloadFactory>
+        <script language="js">
+            <![CDATA[
+            //request body optional parameters
+            var status = mc.getProperty('status');
+            var resolution = mc.getProperty('resolution');
+            var escalationLevel = mc.getProperty('escalationLevel');
+            var assignments = mc.getProperty('assignments');
+            var escalationPolicy = mc.getProperty('escalationPolicy');
+            var payload = mc.getPayloadJSON();
+            if (status != null && status != "") {
+               payload.status = status;
+            }
+            if (resolution != null && resolution != "") {
+               payload.resolution = resolution;
+            }
+            if (escalationLevel != null && escalationLevel != "") {
+               payload.escalation_level = Integer.parseInt(escalationLevel);
+            }
+            if (assignments != null && assignments != "") {
+               payload.assignments = eval("(" + assignments + ")");
+            }
+            if (escalationPolicy != null && escalationPolicy != "") {
+               payload.escalation_policy = eval("(" + escalationPolicy + ")");
+            }
+            mc.setPayloadJSON(payload);
+         ]]>
+        </script>
+        <property name="From" expression="$ctx:from" scope="transport"/>
+        <call>
+            <endpoint>
+                <http method="put" uri-template="{uri.var.apiUrl}/incidents/{uri.var.incidentId}"/>
+            </endpoint>
+        </call>
+        <property name="Content-Encoding" action="remove" scope="transport"/>
+        <header name="X-Request-Id" scope="transport" action="remove"/>
+        <header name="X-UA-Compatible" scope="transport" action="remove"/>
+        <header name="Status" scope="transport" action="remove"/>
+        <header name="ETag" scope="transport" action="remove"/>
+        <header name="Access-Control-Allow-Headers" scope="transport" action="remove"/>
+        <header name="Access-Control-Max-Age" scope="transport" action="remove"/>
+        <header name="Access-Control-Allow-Methods" scope="transport" action="remove"/>
+        <header name="WWW-Authenticate" scope="transport" action="remove"/>
+        <header name="Access-Control-Allow-Origin" scope="transport" action="remove"/>
+        <header name="Cache-Control" scope="transport" action="remove"/>
+    </sequence>
+</template>

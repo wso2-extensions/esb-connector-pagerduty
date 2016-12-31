@@ -3,7 +3,7 @@
   "apiToken": "%s(apiToken)",
   "name": "%s(userNameOpt)",
   "email": "%s(userEmailOpt)",
-  "requesterId": "%s(requesterId)",
+  "from" : "%s(from)",
   "role": "%s(userRole)",
   "jobTitle": "Engineer"
 }
