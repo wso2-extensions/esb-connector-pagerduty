@@ -4,7 +4,7 @@
     "category": "Issue Tracking and Project Management",
     "documentationUrl": "https://docs.wso2.com/display/ESBCONNECTORS/PagerDuty+Connector",
     "description": "The PagerDuty connector allows you to access the PagerDuty REST API through the WSO2 ESB. PagerDuty provides alerting, on-call scheduling, escalation policies, and incident tracking.",
-    "status": "Active",
+    "status": "Inactive",
     "labels": [
         "connector"
     ],
